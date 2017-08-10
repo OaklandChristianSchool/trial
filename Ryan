@@ -1,0 +1,15 @@
+def goguess(low=1, high=20):
+    print ("I have a number between 1 and 20 inclusive.")
+    secret = random.randint(low, high)
+    count = 0
+    guess = 21
+    while guess != secret:
+        count += 1
+        guess = int(raw_input('Guess: '))
+        if guess < secret:
+          print  (guess, 'is too low.')
+        elif guess > secret:
+          print  (guess, 'is too high.')
+        else:
+            print ('Right! My number is', secret, '! You guessed in', count, 'guesses')
+    return guess
